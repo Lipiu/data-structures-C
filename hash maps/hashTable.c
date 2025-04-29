@@ -16,7 +16,6 @@ struct BankCard
 	char exp_date[EXPIRING_DATE_FORMAT_LENGTH + 1];
 	char* currency;
 };
-
 typedef struct BankCard BankCard;
 
 struct Node
@@ -24,7 +23,6 @@ struct Node
 	BankCard data;
 	struct Node* next; // mem address of the next item (node) in the chain
 };
-
 typedef struct Node Node;
 
 // insert a node into a simple list
@@ -32,7 +30,7 @@ Node* insert_node(Node* list, BankCard bc)
 {
 	Node* t = list;
 
-	if (t)
+	if (t) // t != NULL
 	{
 		// list contains one node at least
 		while (t->next != NULL)
@@ -60,7 +58,7 @@ unsigned int hash_function(char* key, unsigned int htable_size)
 {
 	unsigned int sum = 0;
 	for (unsigned int i = 0; i < strlen(key); i++)
-		sum += key[i]; // add current ASCII code to te sum 
+		sum += key[i]; // add current ASCII code to the sum 
 
 	return (sum % htable_size);
 }
@@ -95,6 +93,29 @@ BankCard* search_card_data(Node** htable, unsigned int htable_size, char* card_n
 }
 
 // delete card data based on card number 
+Node* deleteCardNumber(Node* list, char* cardNumber){
+	while(list != NULL && strcmp(list->data.card_no, cardNumber) == 0){
+		Node* temp = list;
+		list = list->next;
+		free(temp->data.holder);
+		free(temp->data.currency);
+		free(temp);
+	}
+	Node* temp2 = list;
+	while(temp2 != NULL && temp2->next != NULL){
+		if(strcmp(temp2->next->data.card_no, cardNumber) == 0){
+			Node* temp = temp2->next;
+			temp2->next = temp->next;
+			free(temp->data.holder);
+			free(temp->data.currency);
+			free(temp);
+		}
+		else{
+			temp2 = temp2->next;
+		}
+	}
+	return list;
+}
 
 // deallocate the hash table
 
@@ -145,6 +166,20 @@ int main()
 	else
 	{
 		printf("The card data does not exist in hash table.\n");
+	}
+
+	//Testing deletion by card number
+	printf("\nTesting deletion by card number:\n");
+	unsigned int offset = hash_function("6523667711220099", HASH_TABLE_SIZE);
+	HTable[offset] = deleteCardNumber(HTable[offset], "6523667711220099");
+	printf("\nSearching for the number we deleted:\n");
+	p_data = search_card_data(HTable, HASH_TABLE_SIZE, "6523667711220099");
+	if (p_data != NULL){
+    	printf("Card data info: %s %s\n", p_data->holder, p_data->card_no);
+	}
+
+	else{
+    	printf("The card data does not exist in hash table.\n");
 	}
 
 	return 0;
