@@ -92,18 +92,6 @@ BankCard* search_card_data(Node** htable, unsigned int htable_size, char* card_n
 	return NULL; // no match related to card_number
 }
 
-// method to free node
-void freeNode(Node* list){
-	while(list != NULL){
-		Node* temp = list;
-		list = list->next;
-
-		free(temp->data.holder);
-		free(temp->data.currency);
-		free(temp);
-	}
-}
-
 // delete card data based on card number 
 Node* deleteCardNumber(Node* list, char* cardNumber){
 	while(list != NULL && strcmp(list->data.card_no, cardNumber) == 0){
@@ -129,10 +117,26 @@ Node* deleteCardNumber(Node* list, char* cardNumber){
 	return list;
 }
 
+// method to free node
+void freeNode(Node* list){
+	while(list != NULL){
+		Node* temp = list;
+		list = list->next;
+
+		// free node data
+		free(temp->data.holder);
+		free(temp->data.currency);
+
+		//free node itself
+		free(temp);
+	}
+}
+
 // deallocate the hash table
 void freeHashTable(Node** hTable, unsigned int hTableSize){
-	if(hTable == NULL)
+	if(hTable == NULL){
 		return;
+	}
 	for(unsigned int i = 0; i < hTableSize; i++){
 		freeNode(hTable[i]);
 	}
@@ -201,7 +205,7 @@ int main()
     	printf("The card data does not exist in hash table.\n");
 	}
 
-	// Deallocating the hash table memory
+	// Testing deallocation of the hash table memory
 	freeHashTable(HTable, HASH_TABLE_SIZE);
 
 	return 0;
