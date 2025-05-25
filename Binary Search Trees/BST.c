@@ -160,7 +160,45 @@ BSTNode* delete_nodes_on_specified_level(BSTNode* node, unsigned char level) {
 
 }
 
-// delete a node in BST based om its key specified as input parameter
+// delete a node in BST based on its key specified as input parameter
+// in this case my key is card_no
+BSTNode* delete_specific_key(BSTNode* node, char key){
+	if(node != NULL){
+		if(strcmp(node->data.card_no, key) < 0){
+			// key is smaller, go left
+			node->left = delete_specific_key(node->left, key);
+		}
+		else if(strcmp(node->data.card_no, key) > 0){
+			// key is larger, go right
+			node->right = delete_specific_key(node->right, key);
+		}
+		else{
+			// we found the node to be deleted
+			if(node->left == NULL){
+				// case 1: no child or only right child
+				BSTNode* temp = node->right;
+				free(node->data.holder);
+				free(node->data.currency);
+				free(node);
+				node = NULL;
+				return temp;
+			}
+			else if(node->right == NULL){
+				// case 2: only left child
+				BSTNode* temp = node->left;
+				free(node->data.holder);
+				free(node->data.currency);
+				free(node);
+				node = NULL;
+				return temp;
+			}
+			else{
+				// case 3: two children
+				// to be completed...
+			}
+		}
+	}
+}
 
 int main()
 {
