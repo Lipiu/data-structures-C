@@ -1,0 +1,5 @@
+1,28/05,30/05,Rosu Liviu,105.8
+2,31/05,05/06,Rusu Mihnea,200
+3,01/02,05/02,Raevschi Ana,305.5
+4,20/08,25/08,Suto Mara,256.7
+5,03/09,05/09,Sandu Leonard,201.8
