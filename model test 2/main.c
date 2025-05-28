@@ -29,7 +29,7 @@ void post_order_traversal(BSTNode* root){
     if(root){
         post_order_traversal(root->left);
         post_order_traversal(root->right);
-        printf("ID: %u\nLaunch date: %s\nDelivery date: %s\nClient name: %s\nOrder price: %.2f\n", 
+        printf("ID: %u\nLaunch date: %s\nDelivery date: %s\nClient name: %s\nOrder price: %.2f\n\n", 
             root->data.id, root->data.launch_date, root->data.delivery_date, root->data.client_name, root->data.order_price);
     }
 }
