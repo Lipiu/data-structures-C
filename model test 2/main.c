@@ -24,11 +24,32 @@ struct BSTNode{
 };
 typedef struct BSTNode BSTNode;
 
+// in order traversal
+void in_order_traversal(BSTNode* root){
+    if(root){
+        // parse the left subtree
+        in_order_traversal(root->left);
+
+        // process the node
+        printf("ID: %u\nLaunch date: %s\nDelivery date: %s\nClient name: %s\nOrder price: %.2f\n\n", 
+            root->data.id, root->data.launch_date, root->data.delivery_date, root->data.client_name, root->data.order_price);
+
+        // parse the right subtree
+        in_order_traversal(root->right);
+
+    }
+}
+
 // post order traversal
 void post_order_traversal(BSTNode* root){
     if(root){
+        // parse the left subtree
         post_order_traversal(root->left);
+
+        // parse the right subtree
         post_order_traversal(root->right);
+
+        // process nodes
         printf("ID: %u\nLaunch date: %s\nDelivery date: %s\nClient name: %s\nOrder price: %.2f\n\n", 
             root->data.id, root->data.launch_date, root->data.delivery_date, root->data.client_name, root->data.order_price);
     }
