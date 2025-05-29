@@ -24,7 +24,7 @@ struct BSTNode{
 };
 typedef struct BSTNode BSTNode;
 
-// in order traversal
+// in order traversal (parse left -> process nodes -> parse right)
 void in_order_traversal(BSTNode* root){
     if(root){
         // parse the left subtree
@@ -40,7 +40,7 @@ void in_order_traversal(BSTNode* root){
     }
 }
 
-// post order traversal
+// post order traversal (parse left -> parse right -> process nodes)
 void post_order_traversal(BSTNode* root){
     if(root){
         // parse the left subtree
