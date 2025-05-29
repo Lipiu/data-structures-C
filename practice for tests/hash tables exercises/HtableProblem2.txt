@@ -1,0 +1,10 @@
+1,Grand Plaza,New York,4.5,20,180.00
+2,Ocean Breeze,Miami,4.2,15,150.50
+3,Mountain Retreat,Denver,4.8,10,220.00
+4,City Comfort,Chicago,4.0,25,130.00
+5,Lakeside Inn,Orlando,3.9,18,120.00
+6,Desert Rose,Phoenix,4.3,12,145.75
+7,Skyline Stay,Los Angeles,4.6,30,200.00
+8,Forest Haven,Seattle,4.7,14,195.50
+9,Royal Heritage,Boston,4.1,17,160.00
+10,Urban Nest,Austin,4.4,22,175.25
