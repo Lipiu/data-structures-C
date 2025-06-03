@@ -16,3 +16,25 @@ Student* createStudent(const char* name, short group, float income, short id){
     }
     return stud;
 }
+
+
+void deleteStudent(PStudent pStud){
+    if(pStud != NULL){
+        if(pStud->name != NULL){
+            free(pStud->name);
+        }
+        free(pStud);
+    }
+}
+
+
+void printStudent(PStudent pStud){
+    if(pStud != NULL){
+        printf("Student ID: %d\n", pStud->id);
+        if(pStud->name != NULL){
+            printf("Student name: %s\n", pStud->name);
+        }
+        printf("Student income: %.2f\n", pStud->income);
+        printf("Student Group: %d\n", pStud->group);
+    }
+}
