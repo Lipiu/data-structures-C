@@ -1,0 +1,177 @@
+1. Care dintre urmatoarele afirmatii este adevarata cu privire la structura de tip uniune:
+   a. Toate campurile incep la aceeasi locatie de memorie
+   b. Accepta doar tipuri de date intreg pentru definirea campurilor
+   c. Dimensiunea unei locatii este data de suma numarului de biti ai campurilor componente
+   d. Accepta campuri de tip static
+   e. Nu accepta definirea campurilor de tip masiv
+
+2. Princiupiul de licru LIFO presupune:
+   a. Ultimul element inserat este primul extras
+   b. Primul element inserat este primul extras
+   c. Ultimul element inserat este ultimul inserat
+   d. Primul element extras este primul inserat
+
+3. Care dintre mecanismele de evitare a coliziunilor intr-o tabela de dispersie evita crearea
+   grupurilor de coliziuni (zone cluster) in cadrul tabelei?
+   a. Chaining
+   b. Re-hashing
+   c. Linear probing
+   d. Quadratic probing
+   e. Overflow area
+
+4.   O structura de tip stiva nu poate fi reprezentata prin intermediul
+a.   Unei liste simplu inlantuite
+b.   Unui vector
+c.   Unui arbore binar
+d.   Unei liste dublu inlantuite
+
+5. Cand este necesara rotatia dreapta->stanga pentru reechilibrarea unui arbore binar de
+   cautare (BF=factor echilibru)?
+   a. (rad->BF==-2)&&(rad->left->BF==-1)
+   b. (rad->BF==2)&&(rad->left->BF==1)
+   c. (rad->BF==2)&&(rad->left->BF==-1)
+   d. (rad->BF==-2)&&(rad->left->BF==1)
+
+6. Ce principiu de lucru se foloseste pentru cautarea intr-un arbore binar de cautare?
+   a. Divide et impera
+   b. Chaining
+   c. Overflow area
+   d. Re-echilibrare
+7. Intr-un arbore binar de cautare, stergerea unui nod cu doi descendenti determina dezalocarea
+   de memorie pentru:
+   a. Nodul cu cheia de valoare maxima din subarborele stang, dupa interschimbul acestuia cu
+       nodul sters
+   b. Nodul de sters
+   c. Nodul cu cheia de valoare maxima din subarborele drept
+   d. Nodul cu cheia de valoare minima din subarborele drept
+   e. Cel mai indepartat nod frunza relative la pozitia nodului de sters .
+
+8. Caracteristica unui arbore binar de cautare echilibrat este aceea ca:
+   a. Numarul de noduri ale subarborelui stang difera de cel al subarborelui drept cu cel mult o
+       unitate
+   b. Inaltimea subarborelui stang difera de cea a subarborelui drept cu cel mult o unitate
+   c. Numarul de noduri al subarborelui stang difera de cel al subarborelui drept cu exact o
+       unitate
+   d. Inaltimea subarborelui stang difera de cea a subarborelui drept cu fix o unitate
+
+9. Ce reprezinta functia hash?
+   a. Functia pentru calcularea unui cod hash pe baza unui id al obiectului de inserat in tabela
+       de dispersie
+   b. Fuctia de inserare in tabela de dispersie pe baza unui cod hash primit ca parametru de
+       intrare
+   c. Functia de crearea a tebelei de dispersie cu popularea tuturor codurilor hash
+   d. Functia folosita pentru evitarea coliziunilor in cazul utilizarii mecanismului re-hashing
+
+10. Ce efect are operatorul ++ asupra unui pointer de tip Element*?
+    a. Deplasarea poiterului inainte cu 1 octet
+    b. Deplasarea pointerelui inapoi cu 1 octet
+    c. Deplasarea pointerelui inainte cu dimensiunea structurii Element, exprimata in octeti
+    d. Deplasarea pointerului inainte cu dimensiunea primului camp din structura Element,
+        exprimata in octeti
+
+11. Care dintre urmatoarele afirmatii nu este adevarata cu privire la arborele B de ordin m?
+    a. Nodul radacina trebuie sa fie incarcat minim cu [m/2] valori de cheie
+    b. Toate nodurile frunza se afla pe acelasi nivel
+    c. Este un arbore multicai de cautare
+    d. O pagina contine cel putin [m/2] valori de cheie
+    e. Un nod care nu este frunza are cel mult m descendenti
+12. Prnciupiul de lucru FIFO presupune:
+    a. Ultimul element inserat este primul element extras
+    b. Primul element inserat este primul element extras
+    c. Primul element inserat este ultimul element extras
+    d. Ultimul element extras este primul element inserat
+
+13. Care dintre afirmatiile de mai jos este falsa pentru o lista dubla?
+    a. Nodurile alocate ca elemente separate de memorie
+    b. Este o structura de date dinamica si omogena
+    c. Permite acces secvential la elemente
+    d. Structura ocupa un spatiu contiguu de memorie
+
+
+
+14. Care dintre mecanismele de evitare a coliziunilor intr-o tabela de dispersie presupune
+    aplicarea in cascada a aceleiasi functii hash pana cand valoarea obtinuta reprezinta o pozitie
+    libera din tabela?
+    a. Chaining
+    b. Re-hashing
+    c. Linear probing
+    d. Quadratic probing
+    e. Overflow area
+
+15. Un nod radacina intr-un arbore binar este:
+    a. Nodul de la care se poate ajunge la orice alt nod dintr-un arbore
+    b. Nodul care are si fiu stanga si fiu dreapta
+    c. Nodul care nu are nici fiu de dreaota nici fiu de stanga
+    d. Ultimul nod din arbore
+
+16. Care dintre urmatoarele proprietati nu este caracteristica arborilor binari perfect echilibrati?
+    a. Toate nodurile frunza sunt pe acelasi nivel
+    b. Orice nod de pe niveluri intermediare are doi fii
+    c. Diferenta dintre numarul de noduri ale subarborelui drept si numarul de noduri ale
+       subarborelui stang este 0
+    d. Gradul de echilibru al fiecarui nod ia valori in multimea {-1,0,1}
+
+17. O functie poate functiona fara:
+    a. Parametrii
+    b. Antet
+    c. Tip returnat
+    d. Stiva de memorie gestionata intern
+18. Pentru o variabila declarata cu specificator extern, care dintre urmatoarele afirmatii este
+    adevarata?
+    a. Este utilizata pentru variabile declarate in mai multe fisiere sursa
+    b. Este utilizata doar la definirea listei de argumente ale unei functii
+    c. Specificatorul extern este implicit pentru toate variabilele declarate intr-un program sursa
+    d. Poate fi declarata doar in interiorul unei functii (variabila locala)
+    e. Poate contine doar valoare dintr-un registru al procesului
+
+19. O structura de tip coada nu poate fi reprezentata prin intermediul:
+    a. Unei liste simplu inlantuite
+    b. Unui vector
+    c. Unui arbore binar
+    d. Unei liste dublu inlantuite
+
+20. Care dintre urmatoarele implementari nu poate fi folosita la reprezentarea unui graf:
+    a. Matricea de adiacenta
+    b. Listele de muchii
+    c. Vectorul de liste cu varfurile adiacente
+    d. Liste de liste
+    e. Arborele de varfuri
+
+21. Care dintre urmatoarele afirmatii nu este adevarata pentru structura de tip tabela de
+    dispersie?
+    a. Utilizeaza structura de tip lista liniara pentru accesul direct la elementele componente
+    b. Este o structura de cautare
+    c. Este o structura de stocare
+    d. Functia hash utilizata pentru determinarea pozitiei elementului cautat
+    e. Permite prelucrarea cheilor numerice, alfanumerice si compuse (mai multe campuri cu rol
+        de cheie)
+
+22. Gradul de ocupare al memoriei, GOM, intr-o lista dublu inlantuita este:
+    a. GOM > 1
+    b. GOM < 1
+    c. GOM = 1
+    d. GOM = 0
+    e. GOM < 0
+23. Care dintre urmatoarele afirmatii nu este adevarata cu privire la arborele multicai de cautare:
+    a. Numarul de chei este acelasi pentru toate nodurile din structura arborescenta
+    b. Reprezinta o generalizare a arborilor binary de cautare
+    c. Intr-un nod, valorile cheilor sunt ordonate strict crescator
+    d. Pentru un nod, numarul de pointeri de subarbori este cu o unitate mai mare decat numarul
+       de valori de cheie
+    e. Subarborii unui nod sunt arbori multicai de cautare
+
+24. Care dintre urmatoarele afirmatii este adevarat cu privire la arborii AVL si Rosu&Negru?
+    a. Inserarea unui nod in AVL presupune traversarea arborelui de la radacina catre pozitia de
+       inserat urmata de traversarea inversa de la nodul inserat catre nodul radacina. Inserarea
+       unui nod in Rosu&Negru constra intr-o singura traversare de la radacina catre pozitia de
+       inserat
+    b. Ambele tipologii de arbori se traverseaza o singura data, respective de la radacina catre
+       pozitia de inserat a nodului
+    c. Ambele tipologii de arbori se traverseaza o singura data, respective de la pozitia de inserat a
+       nodului catre radacina arborelui
+    d. La inserarea unui dod, cele doua tipologii de arbori nu se traverseaza
+    e. Inserarea unui nod in Rosu&Negru presupune traversarea arborelui de la radacina catre
+       pozitia de inserat urmata de traversarea inversa de la nodul de inserat catre nodul radacina.
+       Inserarea unui nod in AVL conta intr-o singura traversare de la pozitia d einserat catre
+       radacina arborelui
+
