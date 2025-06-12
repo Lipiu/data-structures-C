@@ -357,3 +357,104 @@ property: if `A` is `parent` for `B` than between the values of A and B a semant
     * GE = 0, balanced node
     * GE=1 or GE=-1, node with a minor unbalanced in the right or left subtree
     * A `perfect balanced tree` always `has an odd number of elements`
+* **Maintaining an AVL structure:**
+    * Check the `equilibrium degree` of each node.
+    * Evaluate each insertion/deletion operation in order `not` to unbalance the tree.
+    * `Major unbalanced` scenarios are found when equilibrium degree of a node has the following 2 possible values: `{2, -2}`
+* **Rebalancing:**
+    * In order to `rebalance` a binary tree we can perform two operations:
+        * Simple rotation to the left
+            * Insertion into the left subtree at the left child level
+        * Simple rotation to the right
+            * Insertion into the right subtree at the right child level
+    * `Insertion:` a tree that get unbalanced as a result of an insertion operation must be balanced `before` applying one or two rotations depending on the type of the imbalance.
+    * `Deletion:` much more complex than insertion because this operation can remove nodes not only from the leaves level.
+    * In order to determine which type of rebalance operation needs to be applied, the equilibrium degree of the nodes affected by the operation must be studied.
+    ![alt text](images/binary%20tree%20unbalanced.png)
+* **Steps to rebalancing process:**
+    * A pivot node is identified, the pivot is the first node from the operation’s path in which the GE is equal to 2 or -2
+    * Rebalancing: as closest to the node that triggered the unbalanced condition
+    * Identifying: the type of rotation based on the equilibrium degree of the pivot and the affected node
+    ![alt text](images/rotation.png)
+    ![alt text](images/right%20rotation.png)
+    ![alt text](images/left%20rotation.png)
+
+#
+
+## Graphs
+* **Definition:**
+    * A graph is a non-linear structure composed of `vertices` and links between them, called `edges`
+    graph G(V,E)
+    * edge = v, w ; 𝑤𝑖𝑡ℎ 𝑣, 𝑤 ∈ V
+* **Characteristics:**
+    * The `vertices` are dynamically linked based on the solution requirements
+    * The `edges` mean that two adjacent vertices can be used as a link or path from one point to another
+    * The two sets are finite:
+        * the set of `vertices` – each node called also a vertex
+        * the set of `edges` – each edge being a path segment
+    * elements with multiple links between them
+    * visiting each vertex of the graph structure
+    * searching for a specific element in the structure
+    * identifying a path between two vertices
+* **Clasification:**
+    * Based on the `direction` between edges:\
+    directed graphs or digraphs\
+    undirected graphs.
+    * Based on the `type of connections` between vertices:\
+    weighted graphs (each edge has a quantitative significance)\
+    unweighted graphs or ordinary graphs (each edge is equally important as any other)
+    * Based on the `existence of edges`:\
+    `connected graphs`, there are no unreachable vertices or there is a path between every pair of vertices\
+    `disconnected graphs`, there is at least one isolated vertex.
+* **More theory:**
+    * A `loop` is an edge that connects one vertex to itself
+    * A `path` in a graph structure is a sequence of vertices p0, p1, …, pm, with the property that each pair of adjacent vertices pi and pi+1 are connected by an edge
+    * In a digraph the `edge between` pi and pi+1 has the following significance:
+        * pi is called `source`
+        * pi+1 is called `destination`
+
+* **Undirected graph:**
+    * An undirected graph is a finite set of vertices together with the finite set of edges:
+        * empty sets => void graph
+        * an edge connects two vertices both ways
+        * the order of two connected vertices is not important
+        * if there is an edge between v and u <=> there is also an edge between u and v
+        ![alt text](images/undirected%20graph.png)
+* **Digraph:**
+    * A `directed graph` is a finite set of vertices together with the finite set of edges in which the direction is important.
+    * `Characteristics:`
+        * two connected vertices have different meanings, one is called source and the other destination
+        * The order in which two vertices are connected is important
+        * The edge between two vertices u and v <=> the edge connect u source with the v destination
+* **Adjacency matrix:**
+    ![alt text](images/adjacency%20matrix%20graph.png)
+
+#
+
+## B-Trees
+* **Definition:**
+    * A B-Tree is a tree in which a total order relation is implemented, each node containing a set of values with the following restriction:
+        * `MINIMUM ≤ n ≤ MAXIMUM` where: `MAXIMUM = 2 * MINIMUM`
+* **Characteristics:**
+    * Search trees based on `key` order:
+    * Binary search trees: `one` search key for each node
+    * `Multiple search` paths trees: multiple search keys for each node according to the order of the tree
+    * a more general approach on binary search trees
+    * each node has: a number of maximum `m` keys strictly ordered, with `m+1` subtrees
+    * the number of keys differs for each node;
+    * each node is called a `page`
+    * B-Trees have a `high branching factor` which means that the trees are `fat` with a relatively `small height`
+    * B-Tree of `m` order – properties:
+        * For each node the possible number of direct descendants, `k`, is: `𝒎/2 ≤ 𝒌 ≤ 𝒎`
+        * If the degree of a BTree is `m`, then the maximum number of keys is `m-1`
+        * Each node can have at most `m` descendants, if `m-1` is the number of keys in that particular node
+    * The `min height` of a B-Tree, h, is: `ℎ = log𝑚 𝑛 + 1 − 1`
+        * where:
+            * `m` – the order of the tree greater than or equal to 2;
+            * `n` – the number of keys in the tree
+    * The `max height` of a B-Tree, `h`, is:
+    ![alt text](images/max%20height%20btree.png)
+        * where
+            * `m` – the order of the tree greater than or equal to 2;
+            * `n` – the number of keys in the tree.
+
