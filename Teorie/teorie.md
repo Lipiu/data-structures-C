@@ -1,4 +1,4 @@
-# Teorie pentru examen
+# Theory for the final exam (from all courses)
 
 ## Declarations and types
 **Type specifiers:**
@@ -47,7 +47,7 @@ Synonyms
 * | - OR
 * ^ - OR exclusive - XOR
 * ~ - One complement (flips bit value)
-* .>> - Right shifting
+* .>> - Right shifting (without the ".")
 * << - Left shifting
 
 #
